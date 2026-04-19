@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>kyleshao-dev · 项目与账号中心</title>
+    <meta name="description" content="kyleshao-dev 项目介绍站：网站入口、APP 下载与统一账号中心。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+      <div class="grid"></div>
+    </div>
+
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          <span>kyleshao-dev</span>
+        </div>
+        <div class="nav-links">
+          <a href="#projects">项目</a>
+          <a href="#downloads">下载</a>
+          <a href="#account">统一账号</a>
+        </div>
+        <button class="ghost" data-action="open-register">注册账号</button>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">开发中枢 · 统一入口</p>
+          <h1>把五个项目收拢成一个清晰的入口。</h1>
+          <p class="lead">
+            kyleshao-dev 为博客、论坛、云剪贴板与桌面/移动应用提供统一展示、下载与单点登录入口。
+            你可以用一个账号在各站点之间快速切换，并在用户名冲突时自动合并数据。
+          </p>
+          <div class="cta-row">
+            <button class="primary" data-action="scroll-projects">查看项目</button>
+            <button class="glass" data-action="open-oauth">体验 OAuth</button>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <div class="metric">5</div>
+              <div class="metric-label">活跃项目</div>
+            </div>
+            <div>
+              <div class="metric">3</div>
+              <div class="metric-label">OAuth 互通站点</div>
+            </div>
+            <div>
+              <div class="metric">2</div>
+              <div class="metric-label">桌面应用</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card-header">
+            <span class="pill">统一账号</span>
+            <span class="pill light">SSO</span>
+          </div>
+          <div class="card-body">
+            <h3>一处注册，多处通行</h3>
+            <p>
+              注册 kyleshao-dev 后，博客、论坛、云剪贴板可直接 OAuth 登录。若检测到站点内已有同名用户名，将自动合并并提示确认。
+            </p>
+            <div class="stack">
+              <div class="stack-row">
+                <span>博客</span>
+                <span class="status ok">OAuth 已支持</span>
+              </div>
+              <div class="stack-row">
+                <span>论坛</span>
+                <span class="status ok">OAuth 已支持</span>
+              </div>
+              <div class="stack-row">
+                <span>云剪贴板</span>
+                <span class="status ok">OAuth 已支持</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="primary" data-action="open-register">注册 kyleshao-dev</button>
+            <button class="ghost" data-action="open-oauth">OAuth 登录</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="projects" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">项目总览</p>
+            <h2>五个项目，一次看清。</h2>
+          </div>
+          <p class="section-desc">
+            每个项目都包含站点入口、核心能力与当前状态。可按需跳转到网站，或直接下载对应应用。
+          </p>
+        </div>
+
+        <div class="project-grid" id="projectGrid"></div>
+      </section>
+
+      <section id="downloads" class="section alt">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">应用下载</p>
+            <h2>桌面与移动版统一下载区。</h2>
+          </div>
+          <p class="section-desc">
+            集中提供可执行文件、安装包与小程序入口。可在此统一管理更新链接。
+          </p>
+        </div>
+        <div class="download-grid" id="downloadGrid"></div>
+      </section>
+
+      <section id="account" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">统一账号</p>
+            <h2>账号注册与 OAuth 合并提示。</h2>
+          </div>
+          <p class="section-desc">
+            你可以在此创建 kyleshao-dev 通用账号，并授权到博客、论坛、云剪贴板。若检测到已有同名账户，系统会自动合并并提示。
+          </p>
+        </div>
+
+        <div class="account-grid">
+          <form class="panel" id="registerForm">
+            <div class="form-head">
+              <h3 id="formTitle">注册 kyleshao-dev</h3>
+              <div class="mode-switch">
+                <button type="button" class="ghost active" data-mode="register">注册</button>
+                <button type="button" class="ghost" data-mode="login">登录</button>
+              </div>
+            </div>
+            <label>
+              用户名
+              <input type="text" name="username" placeholder="例如 kyleshao" required />
+            </label>
+            <label>
+              邮箱
+              <input type="email" name="email" placeholder="name@example.com" required />
+            </label>
+            <label>
+              密码
+              <input type="password" name="password" placeholder="至少 8 位" required />
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" required />
+              我已阅读并同意账号协议与合并规则
+            </label>
+            <button type="submit" class="primary" id="submitBtn">创建账号</button>
+            <p class="hint">提交后将生成真实 Token，可用于 OAuth 登录。</p>
+          </form>
+
+          <div class="panel" id="oauthPanel">
+            <h3>OAuth 快捷登录</h3>
+            <p class="muted">选择目标站点，系统将使用你的 kyleshao-dev 用户名进行 OAuth。</p>
+            <div class="oauth-buttons">
+              <button class="ghost" data-site="blog">连接博客</button>
+              <button class="ghost" data-site="forum">连接论坛</button>
+              <button class="ghost" data-site="clipboard">连接云剪贴板</button>
+            </div>
+            <div class="merge-box" id="mergeBox" hidden>
+              <strong>检测到同名账号，已自动合并。</strong>
+              <p id="mergeText"></p>
+              <button class="glass" data-action="ack-merge">知道了</button>
+            </div>
+            <div class="token-box" id="tokenBox" hidden>
+              <div class="token-title">当前会话 Token</div>
+              <code id="tokenValue">-</code>
+              <button class="ghost" data-action="copy-token">复制</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>kyleshao-dev</strong>
+        <span>统一入口与账号中心</span>
+      </div>
+      <div class="footer-links">
+        <a href="#projects">项目</a>
+        <a href="#downloads">下载</a>
+        <a href="#account">账号</a>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" hidden></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
