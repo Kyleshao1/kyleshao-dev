@@ -3,7 +3,7 @@ const projectData = [
     name: "云剪贴板",
     desc: "轻量云剪贴板，支持快速分享、历史管理与链接复制。",
     tags: ["Web", "Netlify", "Supabase"],
-    siteUrl: "https://kyleshao-clipboard.netlify.app",
+    siteUrl: "https://clipboard.kyleshao-blog.top",
     status: "已上线",
     downloads: []
   },
@@ -11,7 +11,7 @@ const projectData = [
     name: "博客",
     desc: "全栈博客系统，涵盖文章、评论、作者与管理后台。",
     tags: ["Web", "Fullstack"],
-    siteUrl: "https://kyleshao-blog.netlify.app",
+    siteUrl: "https://blog.kyleshao-blog.top",
     status: "已上线",
     downloads: []
   },
@@ -19,7 +19,7 @@ const projectData = [
     name: "论坛",
     desc: "社区论坛与话题讨论区，支持 OAuth 登录与内容管理。",
     tags: ["Web", "Community"],
-    siteUrl: "https://kyleshao-forum.netlify.app",
+    siteUrl: "https://forum.kyleshao-blog.top",
     status: "已上线",
     downloads: []
   },
@@ -27,20 +27,20 @@ const projectData = [
     name: "文明",
     desc: "本地策略/模拟应用，支持桌面端运行与存档管理。",
     tags: ["Desktop", "Game"],
-    siteUrl: "https://kyleshao-forum.netlify.app/download/civilization",
+    siteUrl: "https://forum.kyleshao-blog.top/download/civilization",
     status: "本地应用",
     downloads: [
-      { label: "下载页", url: "https://kyleshao-forum.netlify.app/download/civilization" }
+      { label: "下载页", url: "https://forum.kyleshao-blog.top/download/civilization" }
     ]
   },
   {
     name: "耗材管理系统",
     desc: "耗材入库、领用与统计管理，附带桌面端与小程序。",
     tags: ["Desktop", "Inventory"],
-    siteUrl: "https://kyleshao-forum.netlify.app/download/civilization",
+    siteUrl: "https://forum.kyleshao-blog.top/download/civilization",
     status: "本地应用",
     downloads: [
-      { label: "下载页", url: "https://kyleshao-forum.netlify.app/download/civilization" }
+      { label: "下载页", url: "https://forum.kyleshao-blog.top/download/civilization" }
     ]
   }
 ];
@@ -50,14 +50,14 @@ const downloadData = [
     name: "文明",
     desc: "策略模拟桌面版。",
     links: [
-      { label: "下载页", url: "https://kyleshao-forum.netlify.app/download/civilization" }
+      { label: "下载页", url: "https://forum.kyleshao-blog.top/download/civilization" }
     ]
   },
   {
     name: "耗材管理系统",
     desc: "桌面端与小程序入口。",
     links: [
-      { label: "下载页", url: "https://kyleshao-forum.netlify.app/download/civilization" },
+      { label: "下载页", url: "https://forum.kyleshao-blog.top/download/civilization" },
       { label: "小程序目录", url: "../耗材管理系统/wx-miniprogram" }
     ]
   },
@@ -72,15 +72,15 @@ const issuer = window.location.origin;
 let oauthConfig = {
   blog: {
     clientId: "",
-    redirectUri: "https://kyleshao-blog.netlify.app/api/auth/kydev/callback"
+    redirectUri: "https://blog.kyleshao-blog.top/api/auth/kydev/callback"
   },
   forum: {
     clientId: "",
-    redirectUri: "https://kyleshao-forum.netlify.app/api/auth/kydev/callback"
+    redirectUri: "https://forum.kyleshao-blog.top/api/auth/kydev/callback"
   },
   clipboard: {
     clientId: "",
-    redirectUri: "https://kyleshao-clipboard.netlify.app/api/kydev/callback"
+    redirectUri: "https://clipboard.kyleshao-blog.top/api/kydev/callback"
   }
 };
 
